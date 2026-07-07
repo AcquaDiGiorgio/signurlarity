@@ -1,0 +1,6 @@
+"rustfs/rustfs:1.0.0-alpha.82"
+"rustfs/rustfs:1.0.0-beta.1"
+"rustfs/rustfs:1.0.0-beta.1-glibc"
+"rustfs/rustfs:1.0.0-beta"
+"rustfs/rustfs:latest"
+PYTHON_VERSION: "3.10"
