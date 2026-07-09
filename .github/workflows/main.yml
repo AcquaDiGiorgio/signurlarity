@@ -89,7 +89,7 @@ jobs:
       - name: Run pytest
         run: pixi run -e ${{ matrix.python-version }} benchmark --test-results-dir ${{ runner.temp }}/perf_tests/
       - name: Upload perf test result
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: perf-results-${{ matrix.python-version }}
           path: ${{ runner.temp }}/perf_tests/*
@@ -128,7 +128,7 @@ jobs:
           pixi run -e py314 display-benchmark-comparison --test-results-dir ${{ runner.temp }}/perf_tests/ --md-output ${{ runner.temp }}/perf_tests/pretty.md
       - name: Upload perf comparison data
         if: ${{ github.event_name == 'pull_request' }}
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: perf-comment
           path: ${{ runner.temp }}/perf_tests/
